@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="320" viewBox="0 0 1280 320" role="img" aria-label="Vladyslav Bilous — DevOps &amp; Cloud">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#0b2530"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8"/>
+      <stop offset="1" stop-color="#34d399"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#1e293b" stroke-width="1"/>
+    </pattern>
+    <style>
+      .mono { font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace; }
+      .sans { font-family: 'Segoe UI', Inter, Ubuntu, 'Helvetica Neue', Arial, sans-serif; }
+      .dash { stroke-dasharray: 6 10; animation: move 1.6s linear infinite; }
+      @keyframes move { to { stroke-dashoffset: -32; } }
+      .blink { animation: blink 1.1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+      @keyframes pulse { 0%,100% { opacity: .35; } 50% { opacity: .9; } }
+    </style>
+  </defs>
+
+  <rect width="1280" height="320" rx="18" fill="url(#bg)"/>
+  <rect width="1280" height="320" rx="18" fill="url(#grid)" opacity="0.55"/>
+
+  <!-- terminal window -->
+  <g transform="translate(56 52)">
+    <rect width="560" height="216" rx="12" fill="#0b1222" stroke="#1f2a44"/>
+    <circle cx="22" cy="20" r="6" fill="#f87171"/>
+    <circle cx="42" cy="20" r="6" fill="#fbbf24"/>
+    <circle cx="62" cy="20" r="6" fill="#34d399"/>
+    <text x="280" y="25" text-anchor="middle" class="mono" font-size="13" fill="#64748b">whiteinfra@krakow: ~</text>
+
+    <text x="24" y="68" class="mono" font-size="18" fill="#34d399">$ <tspan fill="#e2e8f0">whoami</tspan></text>
+    <text x="24" y="98" class="sans" font-size="30" font-weight="700" fill="#f8fafc">Vladyslav Bilous</text>
+    <text x="24" y="132" class="mono" font-size="18" fill="#34d399">$ <tspan fill="#e2e8f0">cat focus.txt</tspan></text>
+    <text x="24" y="160" class="mono" font-size="17" fill="#7dd3fc">DevOps &amp; Cloud · Linux · CI/CD · Python</text>
+    <text x="24" y="192" class="mono" font-size="18" fill="#34d399">$ <tspan class="blink" fill="#e2e8f0">▍</tspan></text>
+  </g>
+
+  <!-- pipeline -->
+  <g transform="translate(680 0)">
+    <text x="0" y="92" class="mono" font-size="14" fill="#64748b">pipeline: main · status: passing</text>
+
+    <path d="M28 168 H536" stroke="#1f2a44" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M28 168 H536" stroke="url(#flow)" stroke-width="4" fill="none" stroke-linecap="round" class="dash"/>
+
+    <g class="sans" font-size="15" fill="#cbd5e1" text-anchor="middle">
+      <g transform="translate(28 168)">
+        <circle r="26" fill="#0b1222" stroke="#38bdf8" stroke-width="2.5"/>
+        <path d="M-9 0 L-3 6 L10 -7" stroke="#34d399" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text y="56">commit</text>
+      </g>
+      <g transform="translate(155 168)">
+        <circle r="26" fill="#0b1222" stroke="#38bdf8" stroke-width="2.5"/>
+        <path d="M-9 0 L-3 6 L10 -7" stroke="#34d399" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text y="56">build</text>
+      </g>
+      <g transform="translate(282 168)">
+        <circle r="26" fill="#0b1222" stroke="#38bdf8" stroke-width="2.5"/>
+        <path d="M-9 0 L-3 6 L10 -7" stroke="#34d399" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text y="56">test</text>
+      </g>
+      <g transform="translate(409 168)">
+        <circle r="26" fill="#0b1222" stroke="#34d399" stroke-width="2.5"/>
+        <path d="M-9 0 L-3 6 L10 -7" stroke="#34d399" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text y="56">release</text>
+      </g>
+      <g transform="translate(536 168)">
+        <circle r="34" fill="none" stroke="#34d399" stroke-width="2" class="pulse"/>
+        <circle r="26" fill="#0b1222" stroke="#34d399" stroke-width="2.5"/>
+        <path d="M-10 6 L0 -8 L10 6 Z" fill="#34d399"/>
+        <text y="56">deploy</text>
+      </g>
+    </g>
+
+    <text x="0" y="276" class="mono" font-size="14" fill="#475569">Kraków, Poland · UKEN Kraków · Computer Science</text>
+  </g>
+</svg>
